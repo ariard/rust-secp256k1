@@ -11,7 +11,7 @@ fi
 
 PARENT_DIR=$1
 VERSIONCODE=$2
-REV=$3
+REV=0d67d791fa3ac2786a30e86ab1905063a263d669
 DIR=secp256k1
 ORIGDIR=$(pwd)
 
@@ -26,7 +26,7 @@ done
 
 cd "$PARENT_DIR" || exit 1
 rm -rf "$DIR"
-git clone https://github.com/bitcoin-core/secp256k1.git "$DIR"
+git clone https://github.com/ariard/secp256k1.git "$DIR"
 cd "$DIR"
 if [ -n "$REV" ]; then
     git checkout "$REV"
